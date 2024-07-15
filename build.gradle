@@ -5,7 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.0.2'  // Updated version
+        classpath 'com.android.tools.build:gradle:8.5.1'  // Updated version
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'  // Updated version
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'  // This plugin is deprecated
     }

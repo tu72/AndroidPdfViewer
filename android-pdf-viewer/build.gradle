@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    compileSdkVersion 34
+    compileSdkVersion 30
     namespace 'com.github.tu72.pdfviewer'
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 34
+        targetSdkVersion 30
         versionCode 1
         versionName "3.2.0-beta.1"
     }

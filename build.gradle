@@ -2,19 +2,19 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.5.1'  // Updated version
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'  // Updated version
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'  // This plugin is deprecated
+        classpath 'com.android.tools.build:gradle:8.1.0'  // Use a version compatible with Java 17
     }
+}
+
+plugins {
+    id 'maven-publish'
 }
 
 allprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter()
     }
 }

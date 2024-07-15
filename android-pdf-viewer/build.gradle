@@ -70,3 +70,4 @@ afterEvaluate {
 tasks.withType(PublishToMavenRepository) {
     dependsOn('assembleRelease')
 }
+

@@ -922,6 +922,20 @@ private void notifyZoomChange(float zoom) {
         redraw();
     }
 
+    public float getContentWidth() {
+        if (pdfFile == null) {
+            return 0;
+        }
+        return pdfFile.getDocLen(zoom);
+    }
+
+    public float getContentHeight() {
+        if (pdfFile == null) {
+            return 0;
+        }
+        return swipeVertical ? pdfFile.getDocLen(zoom) : toCurrentScale(pdfFile.getMaxPageHeight());
+    }
+
     void loadPageByOffset() {
         if (0 == pdfFile.getPagesCount()) {
             return;

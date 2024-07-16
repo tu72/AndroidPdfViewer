@@ -104,7 +104,12 @@ public void setOnZoomListener(OnZoomListener listener) {
 private void notifyZoomChange(float zoom) {
     Log.d("PDFView", "notifyZoomChange called with zoom: " + zoom);
     if (onZoomListener != null) {
-        onZoomListener.onZoom(zoom);
+        try {
+            onZoomListener.onZoom(zoom);
+            Log.d("PDFView", "onZoomListener.onZoom called successfully");
+        } catch (Exception e) {
+            Log.e("PDFView", "Exception in onZoomListener.onZoom: ", e);
+        }
     } else {
         Log.d("PDFView", "onZoomListener is null");
     }
@@ -1044,8 +1049,14 @@ private void notifyZoomChange(float zoom) {
      */
     public void zoomTo(float zoom) {
         Log.d("PDFView", "zoomTo called with zoom: " + zoom);
-        this.zoom = zoom;
-        notifyZoomChange(zoom);
+        try {
+            this.zoom = zoom;
+            Log.d("PDFView", "About to call notifyZoomChange");
+            notifyZoomChange(zoom);
+            Log.d("PDFView", "notifyZoomChange called successfully");
+        } catch (Exception e) {
+            Log.e("PDFView", "Exception in zoomTo: ", e);
+        }
     }
 
     /**

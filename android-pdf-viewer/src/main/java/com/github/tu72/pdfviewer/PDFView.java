@@ -102,8 +102,11 @@ public void setOnZoomListener(OnZoomListener listener) {
 
 // Call this method whenever zoom changes
 private void notifyZoomChange(float zoom) {
+    Log.d("PDFView", "notifyZoomChange called with zoom: " + zoom);
     if (onZoomListener != null) {
         onZoomListener.onZoom(zoom);
+    } else {
+        Log.d("PDFView", "onZoomListener is null");
     }
 }
     private static final String TAG = PDFView.class.getSimpleName();
@@ -1040,8 +1043,9 @@ private void notifyZoomChange(float zoom) {
      * Change the zoom level
      */
     public void zoomTo(float zoom) {
-        notifyZoomChange(zoom);
+        Log.d("PDFView", "zoomTo called with zoom: " + zoom);
         this.zoom = zoom;
+        notifyZoomChange(zoom);
     }
 
     /**

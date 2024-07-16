@@ -187,6 +187,7 @@ class AnimationManager {
         public void onAnimationUpdate(ValueAnimator animation) {
             float zoom = (Float) animation.getAnimatedValue();
             pdfView.zoomCenteredTo(zoom, new PointF(centerX, centerY));
+
         }
 
         @Override
